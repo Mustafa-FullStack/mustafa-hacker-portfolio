@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustafa Hacker - Pro Exam</title>
+    
+    <meta property="og:image" content="images.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="images.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="matrixCanvas"></canvas>
+
+<div class="app">
+    <aside class="sidebar">
+        <h3>System Tasks</h3>
+        <ul id="unanswered"></ul>
+    </aside>
+
+    <main class="card" id="quiz">
+        <header>
+            <div class="hacker-brand">MUSTAFA <span>HACKER</span></div>
+            <div class="timer-box" id="timer">00:60:00</div>
+        </header>
+        
+        <div id="qbox"></div>
+
+        <div class="actions">
+            <button class="btn-prev" onclick="prevQ()">[ Back ]</button>
+            <button class="btn-check" onclick="check()">[ Verify ]</button>
+            <button class="btn-next" onclick="nextQ()">[ Execute ]</button>
+        </div>
+        
+        <div id="result"></div>
+    </main>
+
+    <main class="card" id="final" style="display:none; text-align: center; padding: 60px;">
+        <h1 style="color:var(--pro-blue); font-size: 3rem; font-family: 'Fira Code';">ACCESS GRANTED</h1>
+        <p style="font-size: 1.2rem; color: #8b949e;">Data extraction complete. Final Analysis:</p>
+        <div id="score" style="font-size: 6rem; margin: 40px 0; color: var(--hacker-green); text-shadow: 0 0 20px var(--hacker-green);"></div>
+        <button onclick="location.reload()" style="background: var(--pro-blue); color: white; width: 300px; margin: auto;">SYSTEM REBOOT</button>
+    </main>
+</div>
+
+<!-- ربط ملف JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
